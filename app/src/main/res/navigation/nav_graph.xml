@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startRaceFragment">
+
+    <fragment
+        android:id="@+id/questFragment"
+        android:name="com.example.quest.ui.fragment.QuestFragment"
+        android:label="fragment_quest"
+        tools:layout="@layout/fragment_quest" >
+        <action
+            android:id="@+id/action_questFragment_to_resultsFragment"
+            app:destination="@id/resultsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultsFragment"
+        android:name="com.example.quest.ui.fragment.ResultsFragment"
+        android:label="fragment_results"
+        tools:layout="@layout/fragment_results" />
+    <fragment
+        android:id="@+id/startRaceFragment"
+        android:name="com.example.quest.ui.fragment.StartRaceFragment"
+        android:label="fragment_start_race"
+        tools:layout="@layout/fragment_start_race" >
+        <action
+            android:id="@+id/action_startRaceFragment_to_questFragment"
+            app:destination="@id/questFragment" />
+    </fragment>
+</navigation>

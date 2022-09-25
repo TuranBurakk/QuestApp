@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "143283172790",
+    "project_id": "millonaire-9907e",
+    "storage_bucket": "millonaire-9907e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:143283172790:android:c2086a5860eba5ead53d17",
+        "android_client_info": {
+          "package_name": "com.example.quest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "143283172790-0qck252kjn12o3tc4fmkcgh02j8e579e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNbOLDL7lbhNdnYV658gvYOZR7Zbo0sVg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "143283172790-0qck252kjn12o3tc4fmkcgh02j8e579e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:143283172790:android:41bfb4ec9f2b1443d53d17",
+        "android_client_info": {
+          "package_name": "com.example.whowantstobemillionaire"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "143283172790-0qck252kjn12o3tc4fmkcgh02j8e579e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNbOLDL7lbhNdnYV658gvYOZR7Zbo0sVg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "143283172790-0qck252kjn12o3tc4fmkcgh02j8e579e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
