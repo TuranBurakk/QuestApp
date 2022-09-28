@@ -27,19 +27,19 @@ class QuestFragment : BaseFragment<FragmentQuestBinding>(FragmentQuestBinding::i
            val adapter = QuestAdapter(it,this)
            binding.questrv.adapter = adapter
            adapter.notifyDataSetChanged()
+            binding.Result.setOnClickListener {
+                findNavController().navigate(QuestFragmentDirections.actionQuestFragmentToResultsFragment(adapter.score,adapter.mistake))
+            }
 
 
        }
         (activity as AppCompatActivity).supportActionBar?.title = "Quest"
-        binding.button.setOnClickListener {
-            findNavController().navigate(QuestFragmentDirections.actionQuestFragmentToResultsFragment(10,0))
-        }
+
     }
 
     override fun questClick(position: Int) {
 
         binding.questrv.scrollToPosition(position+1)
     }
-
 
 }

@@ -10,9 +10,9 @@ import com.example.quest.model.Quests
 
 class QuestAdapter(val list: List<Quests> , private val itemListener: QuestClickListener): RecyclerView.Adapter<QuestAdapter.QuestHolder>() {
 
+    var score : Int = 0
+    var mistake : Int = 0
     class QuestHolder(val binding: QuestRecRowBinding) : RecyclerView.ViewHolder(binding.root) {
-
-
 
     }
 
@@ -31,17 +31,16 @@ class QuestAdapter(val list: List<Quests> , private val itemListener: QuestClick
         holder.binding.AnswerD.text = list[position].replyd1
 
         onClick(holder.binding.AnswerA,holder.binding.AnswerB,holder.binding.AnswerC,
-            holder.binding.AnswerD,position,list[position].truereply)
+            holder.binding.AnswerD,position)
 
         onClick(holder.binding.AnswerB,holder.binding.AnswerA,holder.binding.AnswerC,
-            holder.binding.AnswerD,position,list[position].truereply)
+            holder.binding.AnswerD,position)
 
         onClick(holder.binding.AnswerC,holder.binding.AnswerB,holder.binding.AnswerA,
-            holder.binding.AnswerD,position,list[position].truereply)
+            holder.binding.AnswerD,position)
 
         onClick(holder.binding.AnswerD,holder.binding.AnswerB,holder.binding.AnswerC,
-            holder.binding.AnswerA,position,list[position].truereply)
-
+            holder.binding.AnswerA,position)
 
     }
 
@@ -50,28 +49,21 @@ class QuestAdapter(val list: List<Quests> , private val itemListener: QuestClick
         return list.size
     }
     fun onClick(textView: TextView,textView1: TextView,textView2: TextView,textView3: TextView,
-                position: Int, reply : String?){
-        var score  = 0
-        var yanlis  = 0
+                position: Int){
         textView.setOnClickListener {
                 notClick(textView)
                 notClick(textView1)
                 notClick(textView2)
                 notClick(textView3)
             if (textView.text != list[position].truereply) {
-                yanlis += 1
+                mistake += 1
             } else {
-                score += 1
+               score += 1
             }
-
-
             itemListener.questClick(position)
         }
     }
     fun notClick(textView: TextView){
         textView.isClickable = false
-    }
-    fun scores(score : Int?, yanlis : Int?){
-
     }
 }
