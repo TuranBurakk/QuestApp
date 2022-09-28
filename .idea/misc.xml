@@ -4,6 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/burak/AndroidStudioProjects/Quest/app/src/main/res/drawable/buttonbg.xml" value="0.3185" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/Quest/app/src/main/res/drawable/buttonbggreen.xml" value="0.3625" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/Quest/app/src/main/res/drawable/buttonbgred.xml" value="0.3625" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/Quest/app/src/main/res/layout/action_bar.xml" value="0.33" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/Quest/app/src/main/res/layout/action_bar_quest.xml" value="0.1762917933130699" />
         <entry key="..\:/Users/burak/AndroidStudioProjects/Quest/app/src/main/res/layout/activity_main.xml" value="0.3625" />
         <entry key="..\:/Users/burak/AndroidStudioProjects/Quest/app/src/main/res/layout/fragment_quest.xml" value="0.3625" />
         <entry key="..\:/Users/burak/AndroidStudioProjects/Quest/app/src/main/res/layout/fragment_results.xml" value="0.3484375" />
