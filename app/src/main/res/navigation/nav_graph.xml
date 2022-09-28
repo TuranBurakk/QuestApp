@@ -18,7 +18,16 @@
         android:id="@+id/resultsFragment"
         android:name="com.example.quest.ui.fragment.ResultsFragment"
         android:label="fragment_results"
-        tools:layout="@layout/fragment_results" />
+        tools:layout="@layout/fragment_results" >
+        <argument
+            android:name="conclusion"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="negative"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
     <fragment
         android:id="@+id/startRaceFragment"
         android:name="com.example.quest.ui.fragment.StartRaceFragment"

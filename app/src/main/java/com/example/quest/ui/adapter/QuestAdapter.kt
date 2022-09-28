@@ -1,14 +1,12 @@
 package com.example.quest.ui.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.quest.R
 import com.example.quest.databinding.QuestRecRowBinding
 import com.example.quest.model.Quests
-import kotlinx.coroutines.delay
 
 class QuestAdapter(val list: List<Quests> , private val itemListener: QuestClickListener): RecyclerView.Adapter<QuestAdapter.QuestHolder>() {
 
@@ -34,10 +32,13 @@ class QuestAdapter(val list: List<Quests> , private val itemListener: QuestClick
 
         onClick(holder.binding.AnswerA,holder.binding.AnswerB,holder.binding.AnswerC,
             holder.binding.AnswerD,position,list[position].truereply)
+
         onClick(holder.binding.AnswerB,holder.binding.AnswerA,holder.binding.AnswerC,
             holder.binding.AnswerD,position,list[position].truereply)
+
         onClick(holder.binding.AnswerC,holder.binding.AnswerB,holder.binding.AnswerA,
             holder.binding.AnswerD,position,list[position].truereply)
+
         onClick(holder.binding.AnswerD,holder.binding.AnswerB,holder.binding.AnswerC,
             holder.binding.AnswerA,position,list[position].truereply)
 
@@ -50,21 +51,27 @@ class QuestAdapter(val list: List<Quests> , private val itemListener: QuestClick
     }
     fun onClick(textView: TextView,textView1: TextView,textView2: TextView,textView3: TextView,
                 position: Int, reply : String?){
+        var score  = 0
+        var yanlis  = 0
         textView.setOnClickListener {
                 notClick(textView)
                 notClick(textView1)
                 notClick(textView2)
                 notClick(textView3)
             if (textView.text != list[position].truereply) {
-                textView.setBackgroundResource(R.drawable.buttonbgred)
+                yanlis += 1
             } else {
-                textView.setBackgroundResource(R.drawable.buttonbggreen)
+                score += 1
             }
+
 
             itemListener.questClick(position)
         }
     }
     fun notClick(textView: TextView){
         textView.isClickable = false
+    }
+    fun scores(score : Int?, yanlis : Int?){
+
     }
 }

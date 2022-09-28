@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.example.quest.base.BaseFragment
 import com.example.quest.databinding.FragmentQuestBinding
 import com.example.quest.ui.QuestViewModel
@@ -30,7 +31,9 @@ class QuestFragment : BaseFragment<FragmentQuestBinding>(FragmentQuestBinding::i
 
        }
         (activity as AppCompatActivity).supportActionBar?.title = "Quest"
-
+        binding.button.setOnClickListener {
+            findNavController().navigate(QuestFragmentDirections.actionQuestFragmentToResultsFragment(10,0))
+        }
     }
 
     override fun questClick(position: Int) {
